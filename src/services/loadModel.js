@@ -1,7 +1,7 @@
 const tf = require('@tensorflow/tfjs-node');
  
 async function loadModel() {
-    return tf.loadLayersModel('https://storage.googleapis.com/bucket-model-ml-hh/Model-jagung/model.json');
+    return tf.loadLayersModel(process.env.MODEL_URL);
 }
  
 module.exports = loadModel;
